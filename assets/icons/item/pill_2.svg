@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="pill" cx="50%" cy="40%" r="50%"><stop offset="0%" stop-color="#ff8c00" stop-opacity="0.8"/><stop offset="100%" stop-color="#8b4513" stop-opacity="0.3"/></radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="8" fill="#1a2a3e"/>
+  <g filter="url(#glow)">
+    <circle cx="32" cy="28" r="14" fill="url(#pill)" stroke="#ff8c00" stroke-width="2"/>
+    <circle cx="32" cy="28" r="8" fill="#ff8c00" opacity="0.3"/>
+    <circle cx="28" cy="24" r="3" fill="#fff" opacity="0.4"/>
+    <text x="32" y="56" text-anchor="middle" font-size="10" fill="#ff8c00" font-family="serif">金丹</text>
+  </g>
+</svg>

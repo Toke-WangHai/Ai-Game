@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="64" height="64" rx="8" fill="#1a2a3e"/>
+  <g filter="url(#glow)">
+    
+    <polygon points="32,10 46,24 42,46 22,46 18,24" fill="none" stroke="#3498db" stroke-width="2.5"/>
+    <polygon points="32,10 46,24 42,46 22,46 18,24" fill="#3498db" opacity="0.15"/>
+    <polygon points="32,16 40,26 38,40 26,40 24,26" fill="#3498db" opacity="0.1"/>
+    <circle cx="32" cy="28" r="5" fill="#5dade2" opacity="0.6"/>
+    <text x="32" y="58" text-anchor="middle" font-size="10" fill="#5dade2" font-family="serif">中</text>
+  
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="64" height="64" rx="8" fill="#1a2a3e"/>
+  <g filter="url(#glow)">
+    <polygon points="22,40 18,28 26,18 38,18 46,28 42,40" fill="none" stroke="#c0c0c0" stroke-width="2"/>
+    <polygon points="22,40 18,28 26,18 38,18 46,28 42,40" fill="#c0c0c0" opacity="0.2"/>
+    <polygon points="26,36 24,28 30,22 36,22 40,28 38,36" fill="#e8e8e8" opacity="0.15"/>
+    <circle cx="32" cy="28" r="4" fill="#e0e0e0" opacity="0.6"/>
+    <text x="32" y="56" text-anchor="middle" font-size="10" fill="#c0c0c0" font-family="serif">秘银</text>
+  </g>
+</svg>
