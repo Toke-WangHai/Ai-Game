@@ -1,0 +1,5 @@
+ID,ServantType,ServantName,FoodCost,Duration,ActionInterval,Description
+int,奴仆类型(autoFarm/autoMine/autoHunt),奴仆名称,食物消耗,持续时间(秒),操作间隔(秒/0=无间隔),描述
+1,autoFarm,种田奴仆,20,300,5,自动种植背包种子并收获
+2,autoMine,采矿奴仆,30,300,0,自动开采矿山
+3,autoHunt,猎人,10,300,0,自动打猎获取食物
