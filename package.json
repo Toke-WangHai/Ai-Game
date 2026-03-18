@@ -1,0 +1,33 @@
+{
+  "name": "xiuxian",
+  "version": "1.3.3",
+  "main": "main.js",
+  "description": "修仙重生模拟器 - 一款修仙题材的重生模拟器游戏",
+  "author": "XiuXian Studio",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --win --x64",
+    "export": "node export-data.js"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.xiuxian.game",
+    "productName": "修仙重生模拟器",
+    "forceCodeSigning": false,
+    "files": [
+      "main.js",
+      "index.html",
+      "style.css",
+      "src/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "dir",
+      "icon": "assets/icon-512.png",
+      "signAndEditExecutable": false
+    }
+  }
+}

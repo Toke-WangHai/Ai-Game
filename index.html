@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="修仙重生模拟器">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>修仙重生模拟器</title>
+</head>
+<body>
+    <!-- 开始菜单 -->
+    <div id="startMenu" class="start-menu">
+        <div class="start-menu-content">
+            <h1 class="start-menu-title">修仙重生模拟器</h1>
+            <div id="mainMenu" class="menu-buttons">
+                <button id="newGameBtn" class="menu-btn menu-btn-success">开始新游戏</button>
+                <button id="loadGameBtn" class="menu-btn menu-btn-primary">加载存档</button>
+                <button id="settingsBtn" class="menu-btn menu-btn-setting">⚙ 设置</button>
+            </div>
+            <div id="saveMenu" class="menu-buttons" style="display:none">
+                <div class="save-slots" id="saveSlots"></div>
+                <div style="display:flex;gap:10px;justify-content:center">
+                    <button id="backFromSave" class="menu-btn menu-btn-primary back-button">返回</button>
+                    <button id="newGameFromSave" class="menu-btn menu-btn-success back-button" style="display:none">新游戏</button>
+                </div>
+            </div>
+            <div id="deleteMenu" class="menu-buttons" style="display:none">
+                <div class="save-slots" id="deleteSlots"></div>
+                <button id="backFromDelete" class="menu-btn menu-btn-primary back-button">返回</button>
+            </div>
+            <!-- 设置界面 -->
+            <div id="settingsMenu" class="menu-buttons" style="display:none">
+                <div class="settings-panel">
+                    <div class="settings-group">
+                        <div class="settings-group-title">🖥️ 显示设置</div>
+                        <div class="settings-option">
+                            <div>
+                                <div class="settings-option-label">全屏模式</div>
+                                <div class="settings-option-desc">切换窗口/全屏显示</div>
+                            </div>
+                            <div id="fullscreenToggle" class="toggle-switch"></div>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <div class="settings-group-title">🔊 声音设置</div>
+                        <div class="settings-option">
+                            <div>
+                                <div class="settings-option-label">背景音乐</div>
+                                <div class="settings-option-desc">修仙空灵古琴风BGM</div>
+                            </div>
+                            <div id="bgmToggle" class="toggle-switch active"></div>
+                        </div>
+                        <div class="settings-option">
+                            <div style="flex:1">
+                                <div class="settings-option-label">音乐音量</div>
+                            </div>
+                            <div class="volume-slider-wrap">
+                                <input type="range" id="bgmVolumeSlider" class="volume-slider" min="0" max="100" value="60">
+                                <span class="volume-value" id="bgmVolumeValue">60%</span>
+                            </div>
+                        </div>
+                        <div class="settings-option">
+                            <div>
+                                <div class="settings-option-label">音效</div>
+                                <div class="settings-option-desc">按钮、战斗、突破等音效</div>
+                            </div>
+                            <div id="sfxToggle" class="toggle-switch active"></div>
+                        </div>
+                        <div class="settings-option">
+                            <div style="flex:1">
+                                <div class="settings-option-label">音效音量</div>
+                            </div>
+                            <div class="volume-slider-wrap">
+                                <input type="range" id="sfxVolumeSlider" class="volume-slider" min="0" max="100" value="70">
+                                <span class="volume-value" id="sfxVolumeValue">70%</span>
+                            </div>
+                        </div>
+                        <div class="settings-option" style="border-bottom:none">
+                            <div style="flex:1">
+                                <div class="settings-option-label">主音量</div>
+                                <div class="settings-option-desc">控制所有音频的总音量</div>
+                            </div>
+                            <div class="volume-slider-wrap">
+                                <input type="range" id="masterVolumeSlider" class="volume-slider" min="0" max="100" value="50">
+                                <span class="volume-value" id="masterVolumeValue">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <div class="settings-group-title">📐 游玩比例</div>
+                        <div class="settings-option-desc" style="margin-bottom:10px">选择最适合你屏幕的游玩比例，游戏界面将以此为基准缩放</div>
+                        <div class="resolution-options" id="resolutionOptions">
+                            <div class="resolution-btn" data-width="1100" data-height="750">
+                                <span class="res-name">标准</span>
+                                <span class="res-size">1100 × 750</span>
+                            </div>
+                            <div class="resolution-btn" data-width="1300" data-height="850">
+                                <span class="res-name">宽屏</span>
+                                <span class="res-size">1300 × 850</span>
+                            </div>
+                            <div class="resolution-btn" data-width="1500" data-height="950">
+                                <span class="res-name">大屏</span>
+                                <span class="res-size">1500 × 950</span>
+                            </div>
+                            <div class="resolution-btn" data-width="900" data-height="600">
+                                <span class="res-name">紧凑</span>
+                                <span class="res-size">900 × 600</span>
+                            </div>
+                            <div class="resolution-btn" data-width="0" data-height="0">
+                                <span class="res-name">自适应</span>
+                                <span class="res-size">自动填充窗口</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="backFromSettings" class="menu-btn menu-btn-primary back-button">返回</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container" style="display:none">
+        <!-- 全局资源栏 -->
+        <div class="resource-bar">
+            <div class="resource-item">
+                <span class="resource-icon">💎</span>
+                <span class="resource-label">灵石</span>
+                <span class="resource-value" id="res-spirit-stone">0</span>
+            </div>
+            <div class="resource-item">
+                <span class="resource-icon">🪵</span>
+                <span class="resource-label">木材</span>
+                <span class="resource-value" id="res-wood">0</span>
+            </div>
+            <div class="resource-item">
+                <span class="resource-icon">🍚</span>
+                <span class="resource-label">食物</span>
+                <span class="resource-value" id="res-food">0</span>
+            </div>
+        </div>
+
+        <!-- 顶部：境界居中 + 属性左右分布 -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <div class="attr-item-horizontal">
+                    <div class="label">修为</div>
+                    <div class="value" id="xiuyi">0</div>
+                </div>
+                <div class="attr-item-horizontal">
+                    <div class="label">体魄</div>
+                    <div class="value" id="tipao">0</div>
+                </div>
+                <div class="attr-item-horizontal">
+                    <div class="label">寿命</div>
+                    <div class="value" id="shouming">0</div>
+                </div>
+            </div>
+            <div class="top-bar-center">
+                <div class="realm-name" id="level">练气一层</div>
+                <div class="realm-desc" id="level-desc">修仙路上的起点</div>
+                <div class="xiuyi-progress-bar" id="xiuyiProgressBar">
+                    <div class="xiuyi-progress-fill" id="xiuyiProgressFill"></div>
+                    <div class="xiuyi-progress-text" id="xiuyiProgressText"></div>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="attr-item-horizontal">
+                    <div class="label">气运</div>
+                    <div class="value" id="qiyun">0</div>
+                </div>
+                <div class="attr-item-horizontal">
+                    <div class="label">元神</div>
+                    <div class="value" id="yuanshen">0</div>
+                </div>
+                <div class="attr-item-horizontal">
+                    <div class="label">年</div>
+                    <div class="value" id="age">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中间：状态和日志 -->
+        <div class="middle-section">
+            <div id="wordPanel" class="word-panel" style="display:none">
+                <h3 style="text-align:center">请选择三个天赋</h3>
+                <div id="wordList" class="word-list"></div>
+                <div style="text-align:center;margin-top:10px;flex-shrink:0"><button id="confirm" class="btn btn-primary">确认词条</button></div>
+            </div>
+
+            <div id="status" class="status">请开始新游戏</div>
+
+            <!-- 突破提示横幅 -->
+            <div id="breakthroughBanner" class="breakthrough-banner" style="display:none" onclick="if(typeof TribulationUI!=='undefined'){TribulationUI.openTribulationPage();}">
+                <span class="bt-text"></span>
+            </div>
+
+            <div class="panel">
+                <h3>人生经历</h3>
+                <div id="log" class="event-log"></div>
+            </div>
+        </div>
+
+        <!-- 底部：操作栏 -->
+        <div class="bottom-bar">
+            <div class="clock-container">
+                <div class="clock-row">
+                    <div id="next" class="clock" style="display:none">
+                        <div class="clock-time">60</div>
+                        <div class="clock-label">秒后自动增长</div>
+                    </div>
+                    <button id="nextBtn" class="btn btn-success" disabled>下一岁</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="character" class="btn btn-primary" style="display:none">人物</button>
+                <button id="shopBtn" class="btn btn-success" style="display:none">商店</button>
+                <button id="blessedLandBtn" class="btn btn-success" style="display:none;background:#2ecc71">福地</button>
+                <button id="alchemyBtn" class="btn btn-warning" style="display:none;background:linear-gradient(135deg,#b8520e,#9e440c)">炼丹</button>
+                <button id="tribulationBtn" class="btn btn-warning" style="display:none;background:linear-gradient(135deg,#6a1b9a,#4a148c)">雷池</button>
+                <button id="dungeonBtn" class="btn btn-warning" style="display:none">秘境</button>
+                <button id="skip" class="btn btn-primary" style="display:none">下一年</button>
+                <button id="menuBtn" class="btn btn-primary" style="display:none">菜单</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 人物页面 -->
+    <div id="characterPage" class="character-page">
+        <button id="closeCharacter" class="close-btn">✕</button>
+        <div class="character-content">
+            <h1 class="title">人物详情</h1>
+            
+            <!-- 装备区域 -->
+            <div class="panel">
+                <div>装备栏</div>
+                <div style="text-align: center; margin: 15px 0;">
+                    <span style="color: #ffd700; font-size: 24px; font-weight: bold;">境界：</span>
+                    <span id="char-level" style="color: #ffd700; font-size: 24px; font-weight: bold;">练气一层</span>
+                </div>
+                <div style="text-align: center; margin: 10px 0;">
+                    <span style="color: #aaa; font-size: 16px;" id="char-level-desc">修仙路上的起点</span>
+                </div>
+                <div class="equipment-layout">
+                    <div class="equipment-grid-left">
+                        <div class="equipment-slot" id="slot1">
+                            <div class="slot-number">1号位</div>
+                            <div class="slot-content">空</div>
+                        </div>
+                        <div class="equipment-slot" id="slot2">
+                            <div class="slot-number">2号位</div>
+                            <div class="slot-content">空</div>
+                        </div>
+                    </div>
+
+                    <!-- 角色属性（居中列表）- 显示转换后的战斗属性 -->
+                    <div class="attributes-list">
+                        <div class="attr-list-item">
+                            <span class="attr-list-name">攻击:</span>
+                            <span class="attr-list-value" id="char-attack">0</span>
+                            <span class="attr-list-name">防御:</span>
+                            <span class="attr-list-value" id="char-defense">0</span>
+                        </div>
+                        <div class="attr-list-item">
+                            <span class="attr-list-name">生命:</span>
+                            <span class="attr-list-value" id="char-hp">0</span>
+                            <span class="attr-list-name">闪避几率:</span>
+                            <span class="attr-list-value" id="char-dodge">0</span>
+                        </div>
+                        <div class="attr-list-item">
+                            <span class="attr-list-name">暴击率:</span>
+                            <span class="attr-list-value" id="char-criticalrate">0%</span>
+                            <span class="attr-list-name">精通:</span>
+                            <span class="attr-list-value" id="char-mastery">0</span>
+                        </div>
+                    </div>
+
+                    <div class="equipment-grid">
+                        <div class="equipment-slot" id="slot3">
+                            <div class="slot-number">3号位</div>
+                            <div class="slot-content">空</div>
+                        </div>
+                        <div class="equipment-slot" id="slot4">
+                            <div class="slot-number">4号位</div>
+                            <div class="slot-content">空</div>
+                        </div>
+                        <div class="equipment-slot" id="slot5">
+                            <div class="slot-number">5号位</div>
+                            <div class="slot-content">空</div>
+                        </div>
+                        <div class="equipment-slot" id="slot6">
+                            <div class="slot-number">6号位</div>
+                            <div class="slot-content">空</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 背包界面 -->
+            <div class="backpack-container">
+                <div class="backpack-title">
+                    <span>背包</span>
+                    <span id="backpack-count">0/40</span>
+                </div>
+                <div class="backpack-grid" id="backpack-grid"></div>
+            </div>
+
+            <!-- 销毁操作栏 -->
+            <div style="display:flex;justify-content:center;gap:15px;margin-top:20px;">
+                <button id="storageBtn" class="btn btn-primary" style="padding:10px 30px;font-size:15px;background:linear-gradient(135deg,#8e6b3e,#6b4e2c)">🏛️ 仓库</button>
+                <button id="sortBackpackBtn" class="btn btn-primary" style="padding:10px 30px;font-size:15px">📦 整理</button>
+                <button id="destroyModeBtn" class="btn btn-danger" style="padding:10px 30px;font-size:15px">🗑️ 销毁</button>
+                <button id="confirmDestroyBtn" class="btn btn-danger" style="padding:10px 30px;font-size:15px;display:none">确认销毁</button>
+                <button id="cancelDestroyBtn" class="btn btn-primary" style="padding:10px 30px;font-size:15px;display:none">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 秘境页面 -->
+    <div id="dungeonPage" class="dungeon-page">
+        <button id="closeDungeon" class="dungeon-close-btn">✕</button>
+        <div class="dungeon-content">
+            <h1 class="dungeon-title">⚔ 秘境探索</h1>
+            <div class="stage-list" id="stageList"></div>
+        </div>
+    </div>
+
+    <!-- 商店页面 -->
+    <div id="shopPage" class="shop-page">
+        <button id="closeShop" class="shop-close-btn">✕</button>
+        <div class="shop-content">
+            <h1 class="shop-title">🏪 坊市商铺</h1>
+            <div class="shop-timer" id="shopTimer">刷新倒计时：<span id="shopCountdown">10:00</span></div>
+            <div class="shop-grid" id="shopGrid"></div>
+            <button class="shop-sell-btn" id="shopSellBtn">💰 贩卖物品</button>
+            <div class="shop-section">
+                <div class="shop-section-title">💎 灵石兑换</div>
+                <div class="exchange-grid" id="exchangeGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 福地页面 -->
+    <div id="blessedLandPage" class="blessed-land-page">
+        <button id="closeBlessedLand" class="blessed-land-close-btn">✕</button>
+        <div class="blessed-land-content">
+            <h1 class="blessed-land-title">🏔️ 洞天福地</h1>
+
+            <!-- 灵池区域 -->
+            <div class="pool-section">
+                <div class="pool-header">
+                    <div>
+                        <span class="pool-title">💧 灵池</span>
+                        <span class="pool-level" id="poolLevelText">等级 1</span>
+                    </div>
+                    <div class="pool-countdown">下次产出：<span id="poolCountdown">15</span>秒</div>
+                </div>
+                <div class="pool-desc" id="poolDesc">初级灵池，灵气稀薄</div>
+                <div class="pool-info">
+                    <div class="pool-info-item">
+                        <div class="pool-info-label">已储修为</div>
+                        <div class="pool-info-value" id="poolStored">0</div>
+                    </div>
+                    <div class="pool-info-item">
+                        <div class="pool-info-label">每次产出</div>
+                        <div class="pool-info-value" id="poolPerTick">5</div>
+                    </div>
+                    <div class="pool-info-item">
+                        <div class="pool-info-label">储存上限</div>
+                        <div class="pool-info-value" id="poolMax">500</div>
+                    </div>
+                </div>
+                <div class="pool-progress">
+                    <div class="pool-progress-bar" id="poolProgressBar" style="width:0%"></div>
+                    <div class="pool-progress-text" id="poolProgressText">0 / 500</div>
+                </div>
+                <div id="poolBonusInfo" style="color:#2ecc71;font-size:12px;text-align:center;margin-top:4px;display:none"></div>
+                <div class="pool-buttons">
+                    <button class="pool-btn pool-btn-collect" id="poolCollectBtn">🎁 领取修为</button>
+                    <button class="pool-btn pool-btn-deposit" id="poolDepositBtn">💎 投入灵石</button>
+                    <button class="pool-btn pool-btn-upgrade" id="poolUpgradeBtn">⬆ 升级灵池</button>
+                </div>
+                <div class="cost-info" id="poolUpgradeCost"></div>
+            </div>
+
+            <!-- 灵田区域 -->
+            <div class="field-section">
+                <div class="field-title">🌱 灵田</div>
+                <div class="field-grid" id="fieldGrid"></div>
+            </div>
+
+            <!-- 待领取奖励（奴仆产出） -->
+            <div class="pending-section" id="pendingRewardsSection" style="display:none"></div>
+
+            <!-- 矿山区域 -->
+            <div class="mine-section" id="mineSection"></div>
+
+            <!-- 猎场区域 -->
+            <div class="mine-section" id="huntSection"></div>
+
+            <!-- 奴仆区域 -->
+            <div class="servant-section" id="servantSection"></div>
+        </div>
+    </div>
+
+    <!-- 炼丹炉页面 -->
+    <div id="alchemyPage" class="alchemy-page">
+        <button id="closeAlchemy" class="alchemy-close-btn">✕</button>
+        <div class="alchemy-content">
+            <h1 class="alchemy-title">🔥 炼丹炉</h1>
+            <div class="alchemy-desc">消耗灵草与矿石，炼制珍贵丹药</div>
+            <div id="craftSlotArea" class="craft-slot-area"></div>
+            <h2 class="alchemy-subtitle">📜 配方列表</h2>
+            <div class="recipe-list" id="recipeList"></div>
+        </div>
+    </div>
+
+    <!-- 雷池渡劫页面 -->
+    <div id="tribulationPage" class="tribulation-page">
+        <button id="closeTribulation" class="tribulation-close-btn">✕</button>
+        <div class="tribulation-header">
+            <h1 class="tribulation-title">⚡ 雷池渡劫</h1>
+            <div class="tribulation-desc">进入雷池，迎接天雷洗礼，突破境界瓶颈</div>
+        </div>
+        <div class="tribulation-body" id="tribulationContent"></div>
+    </div>
+
+    <!-- ===== 脚本加载 ===== -->
+    <!-- 全局资源管理 -->
+    <script src="src/resource-manager.js"></script>
+    <script>console.log('[加载] resource-manager.js');</script>
+
+    <!-- 数据层 -->
+    <script src="src/data-processor.js"></script>
+    <script>console.log('[加载] data-processor.js');</script>
+    <script src="src/data.js"></script>
+    <script>console.log('[加载] data.js');</script>
+
+    <!-- 核心系统 -->
+    <script src="src/equipment.js"></script>
+    <script>console.log('[加载] equipment.js');</script>
+    <script src="src/attribute-calculator.js"></script>
+    <script>console.log('[加载] attribute-calculator.js');</script>
+    <script src="src/damage-calculator.js"></script>
+    <script>console.log('[加载] damage-calculator.js');</script>
+    <script src="src/level-calculator.js"></script>
+    <script>console.log('[加载] level-calculator.js');</script>
+    <script src="src/ui.js"></script>
+    <script>console.log('[加载] ui.js');</script>
+    <script src="src/battle-system.js"></script>
+    <script>console.log('[加载] battle-system.js');</script>
+    <script src="src/dungeon.js"></script>
+    <script>console.log('[加载] dungeon.js');</script>
+    <script src="src/item-system.js"></script>
+    <script>console.log('[加载] item-system.js');</script>
+    <script src="src/shop-system.js"></script>
+    <script>console.log('[加载] shop-system.js');</script>
+    <script src="src/blessed-land.js"></script>
+    <script>console.log('[加载] blessed-land.js');</script>
+    <script src="src/storage-system.js"></script>
+    <script>console.log('[加载] storage-system.js');</script>
+    <script src="src/dungeon-ui.js"></script>
+    <script>console.log('[加载] dungeon-ui.js');</script>
+    <script src="src/save-manager.js"></script>
+    <script>console.log('[加载] save-manager.js');</script>
+    <script src="src/game.js"></script>
+    <script>console.log('[加载] game.js');</script>
+    <script src="src/equipment-manager.js"></script>
+    <script>console.log('[加载] equipment-manager.js');</script>
+
+    <!-- UI模块 -->
+    <script src="src/quantity-dialog.js"></script>
+    <script>console.log('[加载] quantity-dialog.js');</script>
+    <script src="src/game-dialog.js"></script>
+    <script>console.log('[加载] game-dialog.js');</script>
+    <script src="src/game-settings.js"></script>
+    <script>console.log('[加载] game-settings.js');</script>
+    <script src="src/game-clock.js"></script>
+    <script>console.log('[加载] game-clock.js');</script>
+    <script src="src/game-resize.js"></script>
+    <script>console.log('[加载] game-resize.js');</script>
+    <script src="src/shop-ui.js"></script>
+    <script>console.log('[加载] shop-ui.js');</script>
+    <script src="src/blessed-land-ui.js"></script>
+    <script>console.log('[加载] blessed-land-ui.js');</script>
+    <script src="src/backpack-ui.js"></script>
+    <script>console.log('[加载] backpack-ui.js');</script>
+    <script src="src/storage-ui.js"></script>
+    <script>console.log('[加载] storage-ui.js');</script>
+    <script src="src/alchemy-system.js"></script>
+    <script>console.log('[加载] alchemy-system.js');</script>
+    <script src="src/pill-system.js"></script>
+    <script>console.log('[加载] pill-system.js');</script>
+    <script src="src/breakthrough-system.js"></script>
+    <script>console.log('[加载] breakthrough-system.js');</script>
+    <script src="src/alchemy-ui.js"></script>
+    <script>console.log('[加载] alchemy-ui.js');</script>
+    <script src="src/tribulation-ui.js"></script>
+    <script>console.log('[加载] tribulation-ui.js');</script>
+    <script src="src/audio-manager.js"></script>
+    <script>console.log('[加载] audio-manager.js');</script>
+    <script src="src/menu-system.js"></script>
+    <script>console.log('[加载] menu-system.js');</script>
+
+    <!-- 游戏初始化入口（必须最后加载） -->
+    <script src="src/game-init.js"></script>
+    <script>console.log('[加载] game-init.js');</script>
+
+    <!-- 浮动灵气粒子效果 -->
+    <canvas id="particleCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.6"></canvas>
+    <script src="src/particles.js"></script>
+</body>
+</html>
