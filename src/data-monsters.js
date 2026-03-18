@@ -1,0 +1,335 @@
+// 自动生成的数据文件，请勿手动编辑
+const MONSTERS_DATA = [
+    {
+        "ID": "999910001",
+        "MonsterName": "灵狐妖",
+        "Attack": "15",
+        "HP": "80",
+        "Defense": "5",
+        "CriticalRate": "5",
+        "Mastery": "3",
+        "MasteryDefense": "2",
+        "Dodge": "8"
+    },
+    {
+        "ID": "999910002",
+        "MonsterName": "石甲兽",
+        "Attack": "10",
+        "HP": "150",
+        "Defense": "15",
+        "CriticalRate": "2",
+        "Mastery": "1",
+        "MasteryDefense": "5",
+        "Dodge": "3"
+    },
+    {
+        "ID": "999910003",
+        "MonsterName": "毒雾蛇",
+        "Attack": "20",
+        "HP": "60",
+        "Defense": "3",
+        "CriticalRate": "8",
+        "Mastery": "5",
+        "MasteryDefense": "1",
+        "Dodge": "12"
+    },
+    {
+        "ID": "999910004",
+        "MonsterName": "幽魂鬼",
+        "Attack": "18",
+        "HP": "70",
+        "Defense": "4",
+        "CriticalRate": "10",
+        "Mastery": "8",
+        "MasteryDefense": "3",
+        "Dodge": "10"
+    },
+    {
+        "ID": "999910005",
+        "MonsterName": "青风狼",
+        "Attack": "22",
+        "HP": "90",
+        "Defense": "8",
+        "CriticalRate": "6",
+        "Mastery": "4",
+        "MasteryDefense": "4",
+        "Dodge": "7"
+    },
+    {
+        "ID": "999910006",
+        "MonsterName": "赤焰虎",
+        "Attack": "30",
+        "HP": "120",
+        "Defense": "10",
+        "CriticalRate": "7",
+        "Mastery": "5",
+        "MasteryDefense": "3",
+        "Dodge": "5"
+    },
+    {
+        "ID": "999910007",
+        "MonsterName": "冰霜蛟",
+        "Attack": "28",
+        "HP": "180",
+        "Defense": "18",
+        "CriticalRate": "4",
+        "Mastery": "6",
+        "MasteryDefense": "8",
+        "Dodge": "4"
+    },
+    {
+        "ID": "999910008",
+        "MonsterName": "雷鸣鹰",
+        "Attack": "35",
+        "HP": "100",
+        "Defense": "7",
+        "CriticalRate": "12",
+        "Mastery": "7",
+        "MasteryDefense": "4",
+        "Dodge": "15"
+    },
+    {
+        "ID": "999910009",
+        "MonsterName": "暗影蝠",
+        "Attack": "25",
+        "HP": "80",
+        "Defense": "5",
+        "CriticalRate": "15",
+        "Mastery": "10",
+        "MasteryDefense": "2",
+        "Dodge": "18"
+    },
+    {
+        "ID": "999910010",
+        "MonsterName": "岩甲龟",
+        "Attack": "12",
+        "HP": "300",
+        "Defense": "30",
+        "CriticalRate": "1",
+        "Mastery": "2",
+        "MasteryDefense": "15",
+        "Dodge": "1"
+    },
+    {
+        "ID": "999910011",
+        "MonsterName": "风行豹",
+        "Attack": "40",
+        "HP": "110",
+        "Defense": "8",
+        "CriticalRate": "10",
+        "Mastery": "6",
+        "MasteryDefense": "5",
+        "Dodge": "14"
+    },
+    {
+        "ID": "999910012",
+        "MonsterName": "烈焰狮",
+        "Attack": "45",
+        "HP": "160",
+        "Defense": "15",
+        "CriticalRate": "8",
+        "Mastery": "8",
+        "MasteryDefense": "6",
+        "Dodge": "6"
+    },
+    {
+        "ID": "999910013",
+        "MonsterName": "冰魄蟒",
+        "Attack": "38",
+        "HP": "200",
+        "Defense": "20",
+        "CriticalRate": "5",
+        "Mastery": "12",
+        "MasteryDefense": "10",
+        "Dodge": "5"
+    },
+    {
+        "ID": "999910014",
+        "MonsterName": "雷翼蜂",
+        "Attack": "42",
+        "HP": "90",
+        "Defense": "6",
+        "CriticalRate": "18",
+        "Mastery": "9",
+        "MasteryDefense": "3",
+        "Dodge": "20"
+    },
+    {
+        "ID": "999910015",
+        "MonsterName": "毒牙蜘蛛",
+        "Attack": "35",
+        "HP": "130",
+        "Defense": "12",
+        "CriticalRate": "8",
+        "Mastery": "15",
+        "MasteryDefense": "7",
+        "Dodge": "8"
+    },
+    {
+        "ID": "999910016",
+        "MonsterName": "暗夜魔狼",
+        "Attack": "50",
+        "HP": "180",
+        "Defense": "18",
+        "CriticalRate": "10",
+        "Mastery": "8",
+        "MasteryDefense": "8",
+        "Dodge": "10"
+    },
+    {
+        "ID": "999910017",
+        "MonsterName": "碧落天蛇",
+        "Attack": "55",
+        "HP": "220",
+        "Defense": "22",
+        "CriticalRate": "7",
+        "Mastery": "18",
+        "MasteryDefense": "12",
+        "Dodge": "7"
+    },
+    {
+        "ID": "999910018",
+        "MonsterName": "赤血鬼王",
+        "Attack": "60",
+        "HP": "250",
+        "Defense": "20",
+        "CriticalRate": "12",
+        "Mastery": "10",
+        "MasteryDefense": "10",
+        "Dodge": "8"
+    },
+    {
+        "ID": "999910019",
+        "MonsterName": "冥界幽灵",
+        "Attack": "48",
+        "HP": "150",
+        "Defense": "10",
+        "CriticalRate": "15",
+        "Mastery": "20",
+        "MasteryDefense": "5",
+        "Dodge": "16"
+    },
+    {
+        "ID": "999910020",
+        "MonsterName": "噬魂妖蛾",
+        "Attack": "52",
+        "HP": "170",
+        "Defense": "14",
+        "CriticalRate": "14",
+        "Mastery": "16",
+        "MasteryDefense": "8",
+        "Dodge": "12"
+    },
+    {
+        "ID": "999910021",
+        "MonsterName": "九幽冥蟒",
+        "Attack": "70",
+        "HP": "350",
+        "Defense": "28",
+        "CriticalRate": "8",
+        "Mastery": "15",
+        "MasteryDefense": "15",
+        "Dodge": "5"
+    },
+    {
+        "ID": "999910022",
+        "MonsterName": "天火凤凰",
+        "Attack": "75",
+        "HP": "280",
+        "Defense": "22",
+        "CriticalRate": "12",
+        "Mastery": "12",
+        "MasteryDefense": "10",
+        "Dodge": "10"
+    },
+    {
+        "ID": "999910023",
+        "MonsterName": "虚空魔蛛",
+        "Attack": "65",
+        "HP": "300",
+        "Defense": "25",
+        "CriticalRate": "10",
+        "Mastery": "22",
+        "MasteryDefense": "18",
+        "Dodge": "8"
+    },
+    {
+        "ID": "999910024",
+        "MonsterName": "雷霆战熊",
+        "Attack": "80",
+        "HP": "400",
+        "Defense": "35",
+        "CriticalRate": "6",
+        "Mastery": "8",
+        "MasteryDefense": "20",
+        "Dodge": "3"
+    },
+    {
+        "ID": "999910025",
+        "MonsterName": "混沌魔龙",
+        "Attack": "90",
+        "HP": "500",
+        "Defense": "30",
+        "CriticalRate": "10",
+        "Mastery": "18",
+        "MasteryDefense": "15",
+        "Dodge": "6"
+    },
+    {
+        "ID": "999910026",
+        "MonsterName": "太虚灵鹤",
+        "Attack": "60",
+        "HP": "200",
+        "Defense": "15",
+        "CriticalRate": "8",
+        "Mastery": "25",
+        "MasteryDefense": "12",
+        "Dodge": "20"
+    },
+    {
+        "ID": "999910027",
+        "MonsterName": "万妖之王",
+        "Attack": "100",
+        "HP": "600",
+        "Defense": "35",
+        "CriticalRate": "12",
+        "Mastery": "20",
+        "MasteryDefense": "18",
+        "Dodge": "5"
+    },
+    {
+        "ID": "999910028",
+        "MonsterName": "天劫雷兽",
+        "Attack": "110",
+        "HP": "550",
+        "Defense": "30",
+        "CriticalRate": "15",
+        "Mastery": "15",
+        "MasteryDefense": "15",
+        "Dodge": "8"
+    },
+    {
+        "ID": "999910029",
+        "MonsterName": "仙魔双面佛",
+        "Attack": "120",
+        "HP": "700",
+        "Defense": "40",
+        "CriticalRate": "10",
+        "Mastery": "25",
+        "MasteryDefense": "22",
+        "Dodge": "6"
+    },
+    {
+        "ID": "999910030",
+        "MonsterName": "飞升守卫",
+        "Attack": "150",
+        "HP": "1000",
+        "Defense": "50",
+        "CriticalRate": "12",
+        "Mastery": "30",
+        "MasteryDefense": "25",
+        "Dodge": "5"
+    }
+];
+
+module.exports = MONSTERS_DATA;

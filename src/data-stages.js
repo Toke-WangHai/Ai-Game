@@ -1,0 +1,185 @@
+// 自动生成的数据文件，请勿手动编辑
+const STAGES_DATA = [
+    {
+        "ID": "1",
+        "StageName": "迷雾森林",
+        "RequiredLevel": "1",
+        "MinClearTime": "8",
+        "MonsterGroupID": "99910001",
+        "DropGroupID": "1",
+        "DeathPenalty": "1",
+        "RewardCount": "6",
+        "RewardTypes": "2",
+        "XiuyiReward": "10"
+    },
+    {
+        "ID": "2",
+        "StageName": "灵兽谷",
+        "RequiredLevel": "3",
+        "MinClearTime": "12",
+        "MonsterGroupID": "99910002",
+        "DropGroupID": "1",
+        "DeathPenalty": "1",
+        "RewardCount": "10",
+        "RewardTypes": "3",
+        "XiuyiReward": "20"
+    },
+    {
+        "ID": "3",
+        "StageName": "幽暗洞穴",
+        "RequiredLevel": "5",
+        "MinClearTime": "16",
+        "MonsterGroupID": "99910003",
+        "DropGroupID": "2",
+        "DeathPenalty": "2",
+        "RewardCount": "12",
+        "RewardTypes": "3",
+        "XiuyiReward": "35"
+    },
+    {
+        "ID": "4",
+        "StageName": "落日峡谷",
+        "RequiredLevel": "8",
+        "MinClearTime": "20",
+        "MonsterGroupID": "99910004",
+        "DropGroupID": "2",
+        "DeathPenalty": "2",
+        "RewardCount": "15",
+        "RewardTypes": "3",
+        "XiuyiReward": "50"
+    },
+    {
+        "ID": "5",
+        "StageName": "雷鸣山脉",
+        "RequiredLevel": "10",
+        "MinClearTime": "25",
+        "MonsterGroupID": "99910005",
+        "DropGroupID": "3",
+        "DeathPenalty": "2",
+        "RewardCount": "18",
+        "RewardTypes": "4",
+        "XiuyiReward": "80"
+    },
+    {
+        "ID": "6",
+        "StageName": "冰封之地",
+        "RequiredLevel": "13",
+        "MinClearTime": "30",
+        "MonsterGroupID": "99910006",
+        "DropGroupID": "3",
+        "DeathPenalty": "3",
+        "RewardCount": "22",
+        "RewardTypes": "4",
+        "XiuyiReward": "120"
+    },
+    {
+        "ID": "7",
+        "StageName": "焚天火域",
+        "RequiredLevel": "16",
+        "MinClearTime": "35",
+        "MonsterGroupID": "99910007",
+        "DropGroupID": "4",
+        "DeathPenalty": "3",
+        "RewardCount": "25",
+        "RewardTypes": "4",
+        "XiuyiReward": "180"
+    },
+    {
+        "ID": "8",
+        "StageName": "九幽深渊",
+        "RequiredLevel": "19",
+        "MinClearTime": "40",
+        "MonsterGroupID": "99910008",
+        "DropGroupID": "4",
+        "DeathPenalty": "3",
+        "RewardCount": "30",
+        "RewardTypes": "5",
+        "XiuyiReward": "250"
+    },
+    {
+        "ID": "9",
+        "StageName": "万妖之墟",
+        "RequiredLevel": "22",
+        "MinClearTime": "45",
+        "MonsterGroupID": "99910009",
+        "DropGroupID": "5",
+        "DeathPenalty": "4",
+        "RewardCount": "35",
+        "RewardTypes": "5",
+        "XiuyiReward": "350"
+    },
+    {
+        "ID": "10",
+        "StageName": "天劫秘境",
+        "RequiredLevel": "25",
+        "MinClearTime": "50",
+        "MonsterGroupID": "99910010",
+        "DropGroupID": "5",
+        "DeathPenalty": "4",
+        "RewardCount": "40",
+        "RewardTypes": "5",
+        "XiuyiReward": "480"
+    },
+    {
+        "ID": "11",
+        "StageName": "混沌虚空",
+        "RequiredLevel": "28",
+        "MinClearTime": "55",
+        "MonsterGroupID": "99910011",
+        "DropGroupID": "5",
+        "DeathPenalty": "4",
+        "RewardCount": "45",
+        "RewardTypes": "6",
+        "XiuyiReward": "650"
+    },
+    {
+        "ID": "12",
+        "StageName": "仙魔战场",
+        "RequiredLevel": "31",
+        "MinClearTime": "60",
+        "MonsterGroupID": "99910012",
+        "DropGroupID": "6",
+        "DeathPenalty": "4",
+        "RewardCount": "50",
+        "RewardTypes": "6",
+        "XiuyiReward": "850"
+    },
+    {
+        "ID": "13",
+        "StageName": "太虚幻境",
+        "RequiredLevel": "34",
+        "MinClearTime": "65",
+        "MonsterGroupID": "99910013",
+        "DropGroupID": "6",
+        "DeathPenalty": "5",
+        "RewardCount": "55",
+        "RewardTypes": "6",
+        "XiuyiReward": "1100"
+    },
+    {
+        "ID": "14",
+        "StageName": "天道试炼",
+        "RequiredLevel": "38",
+        "MinClearTime": "75",
+        "MonsterGroupID": "99910014",
+        "DropGroupID": "6",
+        "DeathPenalty": "5",
+        "RewardCount": "65",
+        "RewardTypes": "7",
+        "XiuyiReward": "1500"
+    },
+    {
+        "ID": "15",
+        "StageName": "飞升之路",
+        "RequiredLevel": "42",
+        "MinClearTime": "85",
+        "MonsterGroupID": "99910015",
+        "DropGroupID": "6",
+        "DeathPenalty": "5",
+        "RewardCount": "80",
+        "RewardTypes": "7",
+        "XiuyiReward": "2000"
+    }
+];
+
+module.exports = STAGES_DATA;

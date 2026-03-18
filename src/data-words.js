@@ -1,0 +1,335 @@
+// 自动生成的数据文件，请勿手动编辑
+const WORDS_DATA = [
+    {
+        "ID": "1",
+        "Name": "凡胎肉体",
+        "Xiuyi": "5",
+        "Tipao": "8",
+        "Shouming": "8",
+        "Qiyun": "0",
+        "Yuanshen": "0",
+        "Weight": "10000",
+        "Quality": "1"
+    },
+    {
+        "ID": "2",
+        "Name": "资质平平",
+        "Xiuyi": "10",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "5",
+        "Yuanshen": "0",
+        "Weight": "10000",
+        "Quality": "1"
+    },
+    {
+        "ID": "3",
+        "Name": "体质普通",
+        "Xiuyi": "0",
+        "Tipao": "8",
+        "Shouming": "0",
+        "Qiyun": "0",
+        "Yuanshen": "5",
+        "Weight": "10000",
+        "Quality": "1"
+    },
+    {
+        "ID": "4",
+        "Name": "命途多舛",
+        "Xiuyi": "5",
+        "Tipao": "0",
+        "Shouming": "12",
+        "Qiyun": "-3",
+        "Yuanshen": "0",
+        "Weight": "10000",
+        "Quality": "1"
+    },
+    {
+        "ID": "5",
+        "Name": "灵气亲和",
+        "Xiuyi": "25",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "10",
+        "Yuanshen": "0",
+        "Weight": "8000",
+        "Quality": "2"
+    },
+    {
+        "ID": "6",
+        "Name": "体魄强健",
+        "Xiuyi": "0",
+        "Tipao": "35",
+        "Shouming": "20",
+        "Qiyun": "0",
+        "Yuanshen": "0",
+        "Weight": "8000",
+        "Quality": "2"
+    },
+    {
+        "ID": "7",
+        "Name": "慧根深种",
+        "Xiuyi": "25",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "0",
+        "Yuanshen": "15",
+        "Weight": "8000",
+        "Quality": "2"
+    },
+    {
+        "ID": "8",
+        "Name": "长寿之相",
+        "Xiuyi": "0",
+        "Tipao": "20",
+        "Shouming": "50",
+        "Qiyun": "0",
+        "Yuanshen": "0",
+        "Weight": "8000",
+        "Quality": "2"
+    },
+    {
+        "ID": "9",
+        "Name": "道基稳固",
+        "Xiuyi": "35",
+        "Tipao": "0",
+        "Shouming": "12",
+        "Qiyun": "0",
+        "Yuanshen": "0",
+        "Weight": "8000",
+        "Quality": "2"
+    },
+    {
+        "ID": "10",
+        "Name": "福缘深厚",
+        "Xiuyi": "5",
+        "Tipao": "0",
+        "Shouming": "12",
+        "Qiyun": "25",
+        "Yuanshen": "0",
+        "Weight": "8000",
+        "Quality": "2"
+    },
+    {
+        "ID": "11",
+        "Name": "仙骨天成",
+        "Xiuyi": "30",
+        "Tipao": "15",
+        "Shouming": "0",
+        "Qiyun": "15",
+        "Yuanshen": "0",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "12",
+        "Name": "元神充沛",
+        "Xiuyi": "15",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "0",
+        "Yuanshen": "25",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "13",
+        "Name": "天煞孤星",
+        "Xiuyi": "40",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "-8",
+        "Yuanshen": "0",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "14",
+        "Name": "紫气东来",
+        "Xiuyi": "30",
+        "Tipao": "0",
+        "Shouming": "12",
+        "Qiyun": "10",
+        "Yuanshen": "10",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "15",
+        "Name": "铜皮铁骨",
+        "Xiuyi": "0",
+        "Tipao": "45",
+        "Shouming": "25",
+        "Qiyun": "0",
+        "Yuanshen": "0",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "16",
+        "Name": "星辰之体",
+        "Xiuyi": "25",
+        "Tipao": "20",
+        "Shouming": "0",
+        "Qiyun": "10",
+        "Yuanshen": "10",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "17",
+        "Name": "灵台清明",
+        "Xiuyi": "30",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "0",
+        "Yuanshen": "20",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "18",
+        "Name": "龙虎之姿",
+        "Xiuyi": "15",
+        "Tipao": "30",
+        "Shouming": "0",
+        "Qiyun": "15",
+        "Yuanshen": "5",
+        "Weight": "5000",
+        "Quality": "3"
+    },
+    {
+        "ID": "19",
+        "Name": "天命之子",
+        "Xiuyi": "5",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "35",
+        "Yuanshen": "20",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "20",
+        "Name": "混沌之体",
+        "Xiuyi": "35",
+        "Tipao": "30",
+        "Shouming": "18",
+        "Qiyun": "0",
+        "Yuanshen": "0",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "21",
+        "Name": "先天道体",
+        "Xiuyi": "45",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "15",
+        "Yuanshen": "15",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "22",
+        "Name": "太乙真骨",
+        "Xiuyi": "30",
+        "Tipao": "15",
+        "Shouming": "25",
+        "Qiyun": "10",
+        "Yuanshen": "10",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "23",
+        "Name": "九转金身",
+        "Xiuyi": "0",
+        "Tipao": "50",
+        "Shouming": "35",
+        "Qiyun": "0",
+        "Yuanshen": "10",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "24",
+        "Name": "通天灵根",
+        "Xiuyi": "40",
+        "Tipao": "0",
+        "Shouming": "0",
+        "Qiyun": "10",
+        "Yuanshen": "25",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "25",
+        "Name": "鸿蒙道种",
+        "Xiuyi": "50",
+        "Tipao": "15",
+        "Shouming": "12",
+        "Qiyun": "10",
+        "Yuanshen": "10",
+        "Weight": "2000",
+        "Quality": "4"
+    },
+    {
+        "ID": "26",
+        "Name": "万古仙胎",
+        "Xiuyi": "40",
+        "Tipao": "25",
+        "Shouming": "0",
+        "Qiyun": "0",
+        "Yuanshen": "35",
+        "Weight": "500",
+        "Quality": "5"
+    },
+    {
+        "ID": "27",
+        "Name": "天道宠儿",
+        "Xiuyi": "30",
+        "Tipao": "15",
+        "Shouming": "25",
+        "Qiyun": "25",
+        "Yuanshen": "25",
+        "Weight": "500",
+        "Quality": "5"
+    },
+    {
+        "ID": "28",
+        "Name": "无上道基",
+        "Xiuyi": "55",
+        "Tipao": "0",
+        "Shouming": "18",
+        "Qiyun": "10",
+        "Yuanshen": "20",
+        "Weight": "500",
+        "Quality": "5"
+    },
+    {
+        "ID": "29",
+        "Name": "太古神体",
+        "Xiuyi": "15",
+        "Tipao": "55",
+        "Shouming": "30",
+        "Qiyun": "10",
+        "Yuanshen": "10",
+        "Weight": "500",
+        "Quality": "5"
+    },
+    {
+        "ID": "30",
+        "Name": "造化之子",
+        "Xiuyi": "35",
+        "Tipao": "20",
+        "Shouming": "12",
+        "Qiyun": "30",
+        "Yuanshen": "30",
+        "Weight": "500",
+        "Quality": "5"
+    }
+];
+
+module.exports = WORDS_DATA;
